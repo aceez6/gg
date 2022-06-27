@@ -1,20 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.6.9' } }
+    agent any 
     stages {
-        stage('build') {
+        stage('Stage 1') {
             steps {
-                sh Employee = {
-		"Name":
-		{
-			"":
-			{	"Task":"",
-                "Start Date":"",
-                "End Date":"",
-                "Progress Status":""
-            }
-        }
-    }
-print(Employee)
+                echo 'Hello World'
             }
         }
     }
