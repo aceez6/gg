@@ -3,7 +3,18 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'm.py'
+                sh Employee = {
+		"Name":
+		{
+			"":
+			{	"Task":"",
+                "Start Date":"",
+                "End Date":"",
+                "Progress Status":""
+            }
+        }
+    }
+print(Employee)
             }
         }
     }
