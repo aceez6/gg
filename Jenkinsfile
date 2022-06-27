@@ -1,14 +1,17 @@
 pipeline {
-    agent none 
+    agent any
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python:3.6.9-alpine' 
+        stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
             }
             steps {
-                sh 'python --version'
+                echo "Hello, ${PERSON}, nice to meet you."
             }
         }
     }
